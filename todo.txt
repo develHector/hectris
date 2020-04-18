@@ -1,0 +1,6 @@
+
+
+En vez de darle el
+# ionic server
+Mejor correrlo emulado Previamente # ionic cordova platform add browser
+# ionic cordova run browser
