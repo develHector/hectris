@@ -1,6 +1,28 @@
 
+// Debugging
 
-En vez de darle el
-# ionic server
-Mejor correrlo emulado Previamente # ionic cordova platform add browser
-# ionic cordova run browser
+    Instead of
+    # ionic server
+
+    Previously do (only once)
+    # ionic cordova platform add browser
+
+    And run it through
+    # ionic cordova run browser
+
+// Deploying (assuming firebase tools, initalization and project already setup)
+
+    Under ./hectris
+    # ionic build --prod
+
+    Then go to the compiled code
+    # cd www
+
+    Test it
+    # http-server -o
+
+    If its ok, get back to home dir and deploy
+    # cd ..
+    # firebase deploy
+
+
