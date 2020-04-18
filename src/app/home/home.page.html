@@ -1,8 +1,10 @@
 <ion-content>
 
+  <!-- background settings -->
   <div style="padding: 0 8%; background-color: lightgray; font-size: x-large;" class="ion-padding-horizontal">
     <ion-grid class="ion-no-padding" style="height: 100vh; display: flex; flex-direction: column; min-height: 100vh;">
 
+      <!-- title and score header -->
       <ion-row style="background-color: lightgray; flex-grow: 1;" class="ion-nowrap">        
           <ion-col offset="-1" size="4" class="ion-text-center ion-align-self-center" style="font-size: small;">        
             Score: {{Score.toLocaleString('en')}}          
@@ -11,34 +13,34 @@
             &nbsp;Hectris!&nbsp;
           </ion-col>
           <ion-col size="4" class="ion-text-center ion-align-self-center" style="font-size: small;">
-            Hi Score: {{HiScore.toLocaleString('en')}}
+            Hi-score: {{HiScore.toLocaleString('en')}}
           </ion-col>        
       </ion-row>
 
+      <!-- main board with rotate-on-click -->
       <ion-row *ngFor="let row of cells ; let i = index" style="background-color: cadetblue; flex-grow: 1;">
         <ion-col size="1" style="background-color: lightgray"></ion-col>
         <ion-col *ngFor="let col of row; let j = index" size="1" class="ion-text-center" style="border-style: outset;"
-          [ngStyle]="{'background-color': col.background_color, 'border-color': col.border_color}" (click)="Rotate()">
-          <!-- {{ 9 * i + j }} -->
+          [ngStyle]="{'background-color': col.background_color, 'border-color': col.border_color}" (click)="Rotate()">          
         </ion-col>
         <ion-col size="1" style="background-color: lightgray"></ion-col>
       </ion-row>
-      
+
+      <!-- lower buttons -->      
       <ion-row style="flex-grow: 1;">
         <ion-col class="ion-align-self-center" size="4" (click)="MoveLeft()" style="text-align: center;">
-          <div style="margin-top: 0.5em;">
-            <ion-icon slot="start" name="arrow-dropleft"></ion-icon>
-            Left
+          <div style="margin-top: 0.5em;">            
+            &larr;
           </div>
         </ion-col>
         <ion-col class="ion-align-self-center" size="4" (click)="MoveDown()" style="text-align: center;">
           <div style="margin-top: 0.5em;">
-            <ion-icon slot="start" name="arrow-dropdown"></ion-icon>
+            &darr;
           </div>
         </ion-col>
         <ion-col class="ion-align-self-center" size="4" (click)="MoveRight()" style="text-align: center;">
-          <div style="margin-top: 0.5em;">
-            <ion-icon slot="start" name="arrow-dropright"></ion-icon>
+          <div style="margin-top: 0.5em;">            
+            &rarr;
           </div>
         </ion-col>
       </ion-row>
@@ -48,10 +50,11 @@
       </ion-row>
     </ion-grid>
 
+    <!-- central start button -->      
     <ion-fab vertical="center" horizontal="center" slot="fixed">
       <ng-container *ngIf="!timer">
         <ion-fab-button (click)="OnStartStop()">
-          <ion-icon name="play"></ion-icon>
+          Go!
         </ion-fab-button>
       </ng-container>
     </ion-fab>
