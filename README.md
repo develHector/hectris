@@ -1,10 +1,10 @@
 # hectris
 Tetris as a PWA (Progressive Web Application)
-Developed under the guidelines of the great Gary Simon under https://youtu.be/Xm_EZAGGGdU
+Under the guidelines of the great Gary Simon https://youtu.be/Xm_EZAGGGdU
 March 2020
 
 # code
-You can find the specifics under /srs/app/home
+You can find the game specifics under /src/app/home
 
 # intentionally untracked files 
 
@@ -36,4 +36,3 @@ npm-debug.log*
 /platforms
 /plugins
 /www
-
