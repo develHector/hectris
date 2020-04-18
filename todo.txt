@@ -2,7 +2,7 @@
 // Debugging
 
     Instead of
-    # ionic server
+    # ionic serve -o
 
     Previously do (only once)
     # ionic cordova platform add browser
