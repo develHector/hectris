@@ -15,10 +15,8 @@
     Under ./hectris
     # ionic build --prod
 
-    Then go to the compiled code
+    Then go to the compiled code and test it
     # cd www
-
-    Test it
     # http-server -o
 
     If its ok, get back to home dir and deploy

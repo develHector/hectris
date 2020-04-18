@@ -12,6 +12,9 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "resolutions": {
+    "@babel/preset-env": "^7.9.5"
+  },
   "dependencies": {
     "@angular/common": "~8.1.2",
     "@angular/core": "~8.1.2",
@@ -21,6 +24,8 @@
     "@angular/pwa": "^0.803.21",
     "@angular/router": "~8.1.2",
     "@angular/service-worker": "~8.1.2",
+    "@babel/compat-data": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/screen-orientation": "^5.19.0",
     "@ionic-native/splash-screen": "^5.0.0",
